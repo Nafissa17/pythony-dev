@@ -115,13 +115,13 @@ def bloquer_joueur(grille, symbole_ordi, symbole_joueur):
 
 def tour_ordi_difficile(grille, symbole_ordi, symbole_joueur):
     """Gère le tour de l'ordinateur pour le niveau difficile."""
-    # Vérifier si l'ordinateur peut gagner au prochain coup
+    # Vérifie si l'ordinateur peut gagner au prochain coup
     if jouer_coup_gagnant(grille, symbole_ordi):
         return
-    # Vérifier si l'ordinateur doit bloquer le joueur
+    # Vérifie si l'ordinateur doit bloquer le joueur
     if bloquer_joueur(grille, symbole_ordi, symbole_joueur):
         return
-    # Si aucune des situations ci-dessus ne se produit, jouer de manière stratégique
+    # Si aucune des situations ci-dessus ne se produit, l'ordi va jouer de manière stratégique
     tour_ordi_moyen(grille, symbole_ordi)
 
 def recommencer():
